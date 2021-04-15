@@ -1,4 +1,3 @@
-# Inisialisasi nilai tebakan awal, nilai epsilon
 a <- matrix(c(4,4,-2,-1,-8,1,1,1,5), nrow = 3)
 n <- nrow(a)
 b <- c(7,-21,15)
@@ -8,7 +7,6 @@ maxit <- 100
 x <- p0
 conv <- TRUE
 
-# Cek kondisi kekonvergenan solusi dengan syarat cukup dominan secara diagonal
 for (i in 1:n){
   c <- 0
   for (j in 1:n){
@@ -22,7 +20,6 @@ for (i in 1:n){
   }
 }
 
-# Penghitungan iterasi
 for(k in 1:maxit){
   if(conv == FALSE)
     stop("Solusi Divergen")
@@ -42,7 +39,6 @@ for(k in 1:maxit){
     print(paste("x[", i, "] = ", x[i]))
   }
 
-  # Cek kondisi berhenti untuk proses iterasi
   if (abserr < eps)
     break
 }
