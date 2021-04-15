@@ -22,10 +22,10 @@ for (i in 1:n){
 
 for(k in 1:maxit){
   if(conv == FALSE)
-    stop("Solusi Divergen")
+    stop("Divergent")
   if(k == maxit)
-    warning("Iterasi sudah maksimal")
-  print(paste("iterasi ke",k))
+    warning("Maximum Iteration is reached")
+  print(paste("Iteration",k))
   for (i in 1:n) {
     s <- 0
     for(j in 1:n){
